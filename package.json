@@ -1,0 +1,24 @@
+{
+  "name": "edu-track",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apurva-Shingade/Edu-Track.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Apurva-Shingade/Edu-Track/issues"
+  },
+  "homepage": "https://github.com/Apurva-Shingade/Edu-Track#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "react-bootstrap": "^2.10.10",
+    "react-icons": "^5.7.0"
+  }
+}

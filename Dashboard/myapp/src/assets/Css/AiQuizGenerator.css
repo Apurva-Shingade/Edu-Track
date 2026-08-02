@@ -1,0 +1,251 @@
+/* LMS Green System Color Variables */
+:root {
+  --sidebar-bg: #0f2d20;
+  --sidebar-active: #173e2d;
+  --bg-main: #f5f7f6;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+  --border-color: #e2e8f0;
+  --primary-green: #1c4d36;
+}
+
+/* Page Outer Container */
+.lms-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+
+.lms-main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Content Cards */
+.content-card {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+}
+
+.card-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Mode Toggle Group */
+.mode-toggle-group {
+  display: flex;
+  background-color: #e2e8f0;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.mode-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.mode-btn.active {
+  background-color: #ffffff;
+  color: var(--primary-green);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Controls */
+.form-label-custom {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.35rem;
+}
+
+.custom-input,
+.filter-select {
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+.custom-input:focus,
+.filter-select:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(28, 77, 54, 0.15);
+}
+
+/* File Upload Drag-and-Drop Area */
+.file-upload-box {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #fafafa;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.file-upload-box:hover {
+  border-color: var(--primary-green);
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.upload-text {
+  font-size: 0.875rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.upload-text span {
+  color: var(--primary-green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.file-input-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom Range */
+.custom-range::-webkit-slider-thumb {
+  background: var(--sidebar-bg);
+}
+
+/* Buttons */
+.btn-generate {
+  background-color: var(--sidebar-bg);
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-generate:hover {
+  background-color: var(--sidebar-active);
+}
+
+.btn-create {
+  background-color: var(--sidebar-bg);
+  border: none;
+  font-weight: 500;
+}
+
+.btn-create:hover {
+  background-color: var(--sidebar-active);
+}
+
+.btn-export {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+}
+
+.btn-export:hover {
+  background-color: #f1f5f9;
+}
+
+/* Question Cards Preview */
+.question-card {
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.q-number {
+  font-size: 0.75rem;
+  color: var(--primary-green);
+  background-color: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.q-title {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0 4px;
+}
+
+.icon-btn:hover {
+  color: var(--text-dark);
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.825rem;
+}
+
+.correct-option {
+  border-color: #81c784;
+  background-color: #f1f8e9;
+  font-weight: 600;
+}
+
+.border-dashed {
+  border: 1px dashed var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.border-dashed:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  background: transparent;
+}
