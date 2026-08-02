@@ -1,5 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+  FaThLarge,      // All
+  FaPuzzlePiece,  // General
+  FaFlask,        // Science
+  FaSquareRootAlt,// Math
+  FaLandmark,     // History
+  FaLaptopCode,   // Tech
+  FaFutbol,       // Sports
+  FaMusic         // Music
+} from "react-icons/fa";
+import {
+  FaBullseye,      // Practice
+  FaTrophy,        // Challenge   // Puzzle
+  FaQuestion       // Trivia
+} from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
+import { FaFilm, FaRandom } from "react-icons/fa";
+import { PiPopcornFill } from "react-icons/pi";
 
 export default function QuizPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -14,7 +33,7 @@ export default function QuizPage() {
         {/* Left Filter Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
           {/* Top Category Icons */}
-          <div className="filter-pills-row">
+          {/* <div className="filter-pills-row">
             <FilterPill icon="🎛️" label="All" active={activeCategory === 'All'} onClick={() => setActiveCategory('All')} />
             <FilterPill icon="🎡" label="General" active={activeCategory === 'General'} onClick={() => setActiveCategory('General')} />
             <FilterPill icon="🧪" label="Science" active={activeCategory === 'Science'} onClick={() => setActiveCategory('Science')} />
@@ -23,20 +42,112 @@ export default function QuizPage() {
             <FilterPill icon="💻" label="Tech" active={activeCategory === 'Tech'} onClick={() => setActiveCategory('Tech')} />
             <FilterPill icon="⚽" label="Sports" active={activeCategory === 'Sports'} onClick={() => setActiveCategory('Sports')} />
             <FilterPill icon="🎵" label="Music" active={activeCategory === 'Music'} onClick={() => setActiveCategory('Music')} />
-          </div>
+          </div> */}
+          <div className="filter-pills-row">
+  <FilterPill
+    icon={<FaThLarge />}
+    label="All"
+    active={activeCategory === "All"}
+    onClick={() => setActiveCategory("All")}
+  />
+
+  <FilterPill
+    icon={<FaPuzzlePiece />}
+    label="General"
+    active={activeCategory === "General"}
+    onClick={() => setActiveCategory("General")}
+  />
+
+  <FilterPill
+    icon={<FaFlask />}
+    label="Science"
+    active={activeCategory === "Science"}
+    onClick={() => setActiveCategory("Science")}
+  />
+
+  <FilterPill
+    icon={<FaSquareRootAlt />}
+    label="Math"
+    active={activeCategory === "Math"}
+    onClick={() => setActiveCategory("Math")}
+  />
+
+  <FilterPill
+    icon={<FaLandmark />}
+    label="History"
+    active={activeCategory === "History"}
+    onClick={() => setActiveCategory("History")}
+  />
+
+  <FilterPill
+    icon={<FaLaptopCode />}
+    label="Tech"
+    active={activeCategory === "Tech"}
+    onClick={() => setActiveCategory("Tech")}
+  />
+
+  <FilterPill
+    icon={<FaFutbol />}
+    label="Sports"
+    active={activeCategory === "Sports"}
+    onClick={() => setActiveCategory("Sports")}
+  />
+
+  <FilterPill
+    icon={<FaMusic />}
+    label="Music"
+    active={activeCategory === "Music"}
+    onClick={() => setActiveCategory("Music")}
+  />
+</div>
 
           {/* Sub Mode Filters */}
-          <div className="mode-pills-row">
+          {/* <div className="mode-pills-row">
             <button className={`mode-pill ${activeMode === 'Practice' ? 'active' : ''}`} onClick={() => setActiveMode('Practice')}>🎯 Practice</button>
             <button className={`mode-pill ${activeMode === 'Challenge' ? 'active' : ''}`} onClick={() => setActiveMode('Challenge')}>🏆 Challenge</button>
             <button className={`mode-pill ${activeMode === 'Puzzle' ? 'active' : ''}`} onClick={() => setActiveMode('Puzzle')}>🧩 Puzzle</button>
             <button className={`mode-pill ${activeMode === 'Trivia' ? 'active' : ''}`} onClick={() => setActiveMode('Trivia')}>❓ Trivia</button>
-          </div>
+          </div> */}
+          <div className="mode-pills-row">
+  <button
+    className={`mode-pill ${activeMode === "Practice" ? "active" : ""}`}
+    onClick={() => setActiveMode("Practice")}
+  >
+    <FaBullseye className="mode-pill-icon" />
+    <span>Practice</span>
+  </button>
+
+  <button
+    className={`mode-pill ${activeMode === "Challenge" ? "active" : ""}`}
+    onClick={() => setActiveMode("Challenge")}
+  >
+    <FaTrophy className="mode-pill-icon" />
+    <span>Challenge</span>
+  </button>
+
+  <button
+    className={`mode-pill ${activeMode === "Puzzle" ? "active" : ""}`}
+    onClick={() => setActiveMode("Puzzle")}
+  >
+    <FaPuzzlePiece className="mode-pill-icon" />
+    <span>Puzzle</span>
+  </button>
+
+  <button
+    className={`mode-pill ${activeMode === "Trivia" ? "active" : ""}`}
+    onClick={() => setActiveMode("Trivia")}
+  >
+    <FaQuestion className="mode-pill-icon" />
+    <span>Trivia</span>
+  </button>
+</div>
         </div>
 
         {/* Mascot Left Placeholder */}
         {/* <img src="/robot-left.png" alt="Robot Mascot" style={{ width: '120px' }} /> */}
-        <div style={{ fontSize: '70px' }}>🤖</div>
+        <div style={{ fontSize: "70px" }}>
+  <FaRobot />
+</div>
 
         {/* Center Text */}
         <div className="hero-banner-center">
@@ -46,15 +157,65 @@ export default function QuizPage() {
 
         {/* Mascot Right / Chalkboard Placeholder */}
         {/* <img src="/robot-blackboard.png" alt="Trivia Fun" style={{ width: '180px' }} /> */}
-        <div style={{ backgroundColor: '#1F3A2B', color: '#FFF', padding: '15px 25px', borderRadius: '10px', fontSize: '18px', fontWeight: 'bold' }}>
-          🎓 Trivia + Fun²
-        </div>
+      <div
+  style={{
+    backgroundColor: "#1F3A2B",
+    color: "#FFF",
+    padding: "15px 25px",
+    borderRadius: "10px",
+    fontSize: "18px",
+    fontWeight: "bold",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+  }}
+>
+  <FaGraduationCap size={20} />
+  <span>Trivia + Fun²</span>
+</div>
 
         {/* Action Top Right */}
-        <div style={{ position: 'absolute', top: '20px', right: '30px', display: 'flex', gap: '10px' }}>
+        {/* <div style={{ position: 'absolute', top: '20px', right: '30px', display: 'flex', gap: '10px' }}>
           <button className="btn-outline" style={{ backgroundColor: '#FFF', fontSize: '12px' }}>🍿 Remove Ads</button>
           <button className="btn-primary" style={{ backgroundColor: '#0F2E23', fontSize: '12px' }}>🔀 Random Quiz</button>
-        </div>
+        </div> */}
+        <div
+  style={{
+    position: "absolute",
+    top: "20px",
+    right: "30px",
+    display: "flex",
+    gap: "10px",
+  }}
+>
+  <button
+    className="btn-outline"
+    style={{
+      backgroundColor: "#FFF",
+      fontSize: "12px",
+      display: "flex",
+      alignItems: "center",
+      gap: "6px",
+    }}
+  >
+    <PiPopcornFill />
+    Remove Ads
+  </button>
+
+  <button
+    className="btn-primary"
+    style={{
+      backgroundColor: "#0F2E23",
+      fontSize: "12px",
+      display: "flex",
+      alignItems: "center",
+      gap: "6px",
+    }}
+  >
+    <FaRandom />
+    Random Quiz
+  </button>
+</div>
       </div>
 
       {/* POPULAR CATEGORIES */}
@@ -77,7 +238,9 @@ export default function QuizPage() {
             <div className="featured-img-box">
               {/* <img src="/pop-culture.jpg" alt="Featured" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> */}
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '40px' }}>🎬</span>
+                <span style={{ fontSize: "40px" }}>
+  <FaFilm />
+</span>
                 <p style={{ margin: 0, fontSize: '12px' }}>[ Image Placeholder ]</p>
               </div>
             </div>
@@ -140,7 +303,9 @@ function QuizCard({ title, subtitle }) {
       <div className="card-body">
         <div className="card-footer-info">
           <span>{subtitle}</span>
-          <span>🧪</span>
+          <span>
+  <FaFlask />
+</span>
         </div>
       </div>
     </div>
